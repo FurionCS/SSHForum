@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <constant name="struts.devMode" value="true" />
+	<package name="main" extends="struts-default">
+		<!-- 配置使用 paramsPrepareParamsStack 作为默认的拦截器栈 -->
+		<!-- 修改 PrepareInterceptor 拦截器的 alwaysInvokePrepare 属性值为 false -->
+		<interceptors>
+		    <interceptor-stack name="forum">
+		        <interceptor-ref name="paramsPrepareParamsStack">
+		            <param name="prepare.alwaysInvokePrepare">false</param>
+		        </interceptor-ref>
+		    </interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="forum"/>	
+  		<action name="*_*" class="com.SSHForum.Action.{1}" method="{2}">
+  			<result name="input" type="redirect">/Login.jsp</result>
+  			<result name="welcome" type="redirect">/index.jsp</result>
+			<result name="index" type="redirect">/index.jsp</result>
+			<result name="Themesuc">/PlateView/sPlate.jsp</result>
+  		</action>
+	</package>
+</struts>

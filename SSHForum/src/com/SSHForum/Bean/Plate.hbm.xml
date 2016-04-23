@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.SSHForum.Bean">
+	 <class name="Plate" table="T_SSHFORUM_PLATE">  
+	 	<!-- <cache usage="read-write"/> -->
+        <id name="PID" column="PID"> <generator class="native" /></id>  
+      	<property name="PName" column="PNAME" type="string" length="20"></property>
+      	<property name="PTopicCount" column="PTOPICOUNT" type="integer"></property>
+      	<!-- 版主 和user表一对一映射 -->
+      	<many-to-one name="Master" class="User" column="MASTER" unique="true"></many-to-one>
+      	<!-- 映射 1 对多的那个集合属性 -->
+        <!-- set: 映射 set 类型的属性, table: set 中的元素对应的记录放在哪一个数据表中. 该值需要和多对一的多的那个表的名字一致 -->
+        <!-- inverse: 指定由哪一方来维护关联关系. 通常设置为 true, 以指定由多的一端来维护关联关系 -->
+        <!-- cascade 设定级联操作. 开发时不建议设定该属性. 建议使用手工的方式来处理 -->
+        <!-- order-by 在查询时对集合中的元素进行排序, order-by 中使用的是表的字段名, 而不是持久化类的属性名  -->
+      	<set name="theme" table="T_FORUM_THEME" lazy="true" inverse="true" batch-size="5">
+		<!-- 	<cache usage="read-write"/> -->
+			<key column="Plate_ID"></key>
+			<one-to-many class="Theme"/>
+      	</set>
+      <!-- 	batch-size 属性：用来为延迟检索策略或立即检索策略设定批量检索的数量. 批量检索能减少 SELECT 语句的数目, 提高延迟检索或立即检索的运行性能.  -->
+      	<!-- lazy属性：主要决定 plates 集合被初始化的时机 -->
+      	<set name="plates" table="T_FORUM_PLATE" lazy="true" inverse="true" batch-size="5">
+      		<key column="Parent_ID"></key>
+      		<one-to-many class="Plate"/>
+      	</set>
+    </class>  
+</hibernate-mapping>

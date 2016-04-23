@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="plateDao" class="com.SSHForum.Dao.PlateDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="replyDao" class="com.SSHForum.Dao.ReplyDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="themeDao" class="com.SSHForum.Dao.ThemeDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="userDao" class="com.SSHForum.Dao.UserDao">
+		<property name="sessionFactory" ref="sessionFactory"></property>
+	</bean>
+	<bean id="plateService" class="com.SSHForum.Service.PlateService">
+		<property name="platedao" ref="plateDao"></property>
+	</bean>
+	<bean id="replyService" class="com.SSHForum.Service.ReplyService">
+		<property name="replydao" ref="replyDao"></property>
+	</bean>
+	<bean id="themeService" class="com.SSHForum.Service.ThemeService">
+		<property name="themedao" ref="themeDao"></property>
+	</bean>
+	<bean id="userService" class="com.SSHForum.Service.UserService">
+		<property name="userdao" ref="userDao"></property>
+	</bean>
+	<bean id="PlateAction" class="com.SSHForum.Action.PlateAction" scope="prototype">
+		<property name="plateService" ref="plateService"></property>
+	</bean>
+	<bean id="ReplyAction" class="com.SSHForum.Action.ReplyAction" scope="prototype">
+		<property name="replyService" ref="replyService"></property>
+	</bean>
+	<bean id="ThemeAction" class="com.SSHForum.Action.ThemeAction" scope="prototype">
+		<property name="themeService" ref="themeService"></property>
+	</bean>
+	<bean id="UserAction" class="com.SSHForum.Action.UserAction" scope="prototype">
+		<property name="userService" ref="userService"></property>
+	</bean>
+</beans>

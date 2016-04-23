@@ -1,0 +1,146 @@
+.fmiddle{
+	min-width:1000px;
+}
+.middle{
+	width:1000px;
+	margin:auto auto;
+}
+.lf{
+	float:left;
+}
+.rf{
+	float:right;
+}
+.clearOver{
+	overflow: hidden;
+}
+.textCenter{
+	text-align: center;
+}
+.textRight{
+	text-align:right;
+}
+
+
+
+#topNav{
+	background:-webkit-linear-gradient(top,#086ed5,#055db5);
+	background:linear-gradient(to bottom,#086ed5,#055db5);
+	box-shadow:0 1px 2px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.15);
+	padding:10px;
+}
+
+#navUl li a{
+	color:#fff;
+	padding:0px 10px;
+	font-size:16px;
+}
+#navUl li a:hover{
+	color:rgba(255,255,255,0.7);
+}
+.PubTheme{
+	padding:4px 10px;
+	border:1px solid #045bb2;
+	background:-webkit-linear-gradient(top,#0e7bef,#0d73da);
+	background:linear-gradient(to bottom,#0e7bef,#0d73da);
+	color:#fff;
+	font-size:14px;
+	border-radius:4px;
+	outline-style: none;
+	cursor: pointer;
+}
+
+
+#PublishTheme{
+	display:none;
+}
+.publishdiv{
+	position:absolute;
+	left:50%;
+	top:200px;
+	width:400px;
+	margin-left:-200px;
+	background:#fff;
+	z-index: 100;
+	
+}
+
+.publishdiv h2{
+	background:linear-gradient(to bottom,#086ed5,#055db5);
+	background:-webkit-linear-gradient(top,#086ed5,#055db5);
+	box-shadow:0 1px 2px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.15);
+	padding:10px;
+	border:1px;
+	border-radius:4px;
+}
+#theme{
+	padding:10px;
+	margin:10px 0px;
+	width:100%;
+	border:1px solid #999;
+	border-radius:4px;
+}
+#PubContent{
+	padding:10px;
+}
+#content{
+	width:100%;
+	height:150px;
+	resize:none;	
+	text-indent: 10px;
+	line-height: 24px;
+}
+#submitPub{
+	background:-webkit-linear-gradient(top,#1d7fe2,#0865c2);
+	background:#1472cf;
+	border:1px solid #0D6EB8;
+	border-radius:4px;
+	padding:5px 15px;
+	color:#fff;
+	margin:10px 0px;
+	box-shadow:0 1px 0 rgba(255,255,255,.2) inset,0 1px 0 rgba(0,0,0,.2)
+}
+.closeSpan{
+	display:inline-block;
+	margin-top:15px;
+	cursor: pointer;
+}
+#closePic{
+	cursor: pointer;
+}
+  #cover2{
+  display:none;
+        position:fixed;
+        left:0;top:0;right:0;bottom:0;
+        background:rgba(0,0,0,0.3);
+        z-index: 1;
+    }
+    
+    
+#pagePart li{
+	display:inline;
+}
+.next{
+	cursor: pointer;
+}
+.prev{
+	cursor: pointer;
+}
+#pagePart li a{
+	display:inline;
+	
+}
+.active a{
+	display:inline;
+	background:#ccc;
+	padding:5px 10px;
+	border-radius:4px;
+}
+
+
+
+
+
+
+
+

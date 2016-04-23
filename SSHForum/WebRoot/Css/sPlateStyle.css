@@ -1,0 +1,103 @@
+.choose{
+	color:#999;
+	font-size:16px;
+}
+.choose a{
+	color:#698ebf;
+	padding:0px 10px;
+}
+.choose a:hover{
+	color:#259;
+}
+.nowPlate{
+	font-size:24px;
+	padding:10px 10px;
+}
+.orderby{
+	color:#999;
+	font-size:14px;
+	
+	padding:10px 0px;
+}
+.orderby a{
+	color:#698ebf;
+	padding:0px 10px;
+}
+.orderby a:hover{
+	color:#259;
+}
+.card{
+	border-top:1px solid rgba(0,0,0,.1);
+	padding:20px 0px;
+	
+}
+.PubTheme a{
+	color:#fff;
+}
+.Ttile{
+	color:#259;
+	font-size:14px;
+	font-weight: 700;
+}
+.Ttile:hover{
+	text-decoration: underline;
+}
+.cardChick{
+	position:absolute;
+	margin-left:10px;
+	background:#eff6fa;
+	padding:3px 5px;
+	text-align: center;
+	border-radius:4px;
+	font-style: normal;
+	color:#698ebf;
+}
+.cardContent{
+	margin-left:50px;
+}
+.auther{
+	font-weight: 600px;
+	font-size:18px;
+	color:#000;
+	padding:5px;
+}
+.content{
+	line-height: 24px;
+}
+.info span{
+	padding:0px 10px;
+}
+
+
+@font-face {
+      font-family: 'fontello';
+      src: url('../font/fontello.eot?56217673');
+      src: url('../font/fontello.eot?56217673#iefix') format('embedded-opentype'),
+           url('../font/fontello.woff?56217673') format('woff'),
+           url('../font/fontello.ttf?56217673') format('truetype'),
+           url('../font/fontello.svg?56217673#fontello') format('svg');
+      font-weight: normal;
+      font-style: normal;
+    }
+    
+.icon{
+      font-family: "fontello";
+      font-style: normal;
+      font-weight: normal;
+      speak: none;
+      display: inline-block;
+      text-decoration: inherit;
+      width: 1em;
+      margin-right: .2em;
+      text-align: center;
+}
+
+b{
+	color:red;
+	font-family:cursive;
+	position:relative;
+	top:-4px;
+	font-size:13px;
+}
+
+

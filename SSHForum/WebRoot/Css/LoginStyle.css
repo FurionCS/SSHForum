@@ -1,0 +1,67 @@
+body{
+	background:#f7fafc;
+}
+.LoginBody{
+	width:400px;
+	margin:100px auto;
+	
+}
+#Name{
+	font-size:70px;
+	color:#55abed;
+	margin-bottom:20px;
+}
+#Name a{
+	color:#55abed;
+}
+#Name a:LINK{
+	color:#55abed;
+}
+#moto{
+	font-size:24px;
+	color:#999;
+}
+#LR{
+	font-size:18px;
+	padding:10px;
+}
+#LR span{
+	padding:0px 10px;
+	cursor: pointer;
+}
+#loginbtn{
+	color:blue;
+}
+input{
+	display:block;
+	width:80%;
+	margin:10px auto;
+	padding:10px 0px ;
+	text-indent: 10px;
+	border:1px solid #ccc;
+	border-radius:4px;
+}
+.sub{
+	background:#5bb8ff;
+	border:1px solid #5bb8ff;
+	color:#fff;
+	font-size:18px;
+	letter-spacing: 5px;
+}
+.sub:hover{
+	background:#55abed;
+}
+.val{
+	width:80%;
+	margin:0px auto;
+}
+.validate{
+	width:50.5%;
+	display:inline-block;
+	margin:0px;
+}
+.ValPic{
+	display:inline-block;
+	vertical-align:middle;
+	cursor: pointer;
+}

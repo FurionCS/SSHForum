@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.SSHForum.Bean">
+	 <class name="User" table="T_SSHFORUM_USERS">  
+        <id name="ID" column="ID"> <generator class="native" /></id>  
+        <property name="UName" column="UNAME" type="string" length="20"></property> 
+        <property name="UPassword" column="UPassword" type="string" length="20"></property> 
+        <property name="UHeadUrl" column="UHeadUrl" type="string" length="100"></property>
+        <property name="Usex" column="Usex" type="string" length="2"></property>
+      	<property name="UStartTime" column="UStartTime" type="timestamp"></property>
+        <property name="ULastTime" column="ULastTime" type="timestamp"></property> 
+        <property name="UGrade" column="UGrade" type="integer"></property>
+        <property name="UPhone" column="UPhone" type="string" length="20"></property>
+        <property name="UEmail" column="UEmail" type="string" length="50"></property>
+        <property name="UAbout" column="UAbout" type="string" length="100"></property>         		
+   		<one-to-one name="pb" class="Plate" property-ref="Master"></one-to-one>
+   		<set name="reply" table="T_FORUM_Reply" inverse="true" batch-size="5">
+			<key column="USER_ID"></key>
+			<one-to-many class="Reply"/>
+   		</set>
+   		
+   		<set name="theme" table="T_FORUM_THEME" inverse="true" batch-size="5">
+   			<key column="USER_ID"></key>
+   			<one-to-many class="Theme"/>
+   		</set>
+    </class>  
+</hibernate-mapping>

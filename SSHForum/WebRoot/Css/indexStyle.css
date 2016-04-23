@@ -1,0 +1,36 @@
+
+
+
+.plate{
+	margin-top:20px;
+}
+.sPlate{
+	text-indent: 50px;
+}
+.sPlate li{
+	padding:10px 20px 10px 0px;
+	border-radius:4px;
+}
+.spName{
+	color:#000;
+	font-size:12px;
+}
+.spName:hover{
+	color:#269;
+	font-size:13px;
+}
+.sPlate li:hover{
+	cursor:pointer;
+	background:rgba(0,1,200,0.1);
+}
+.lastWrite{
+	
+}
+.centerP{
+	position: absolute;
+	left:50%;
+	
+}
+.countTopic{
+	margin-left:-25px;
+}
